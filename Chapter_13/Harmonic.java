@@ -9,8 +9,8 @@ public class Harmonic {
 		System.out.print("Enter Y: ");
 		double y = scanner.nextFloat();
 
-        double Havg = 2/((1/x)+(1/y));
-        double Aavg = (x + y)/2;
+        double Havg = 2.0/((1.0/x)+(1.0/y));
+        double Aavg = (x + y)/2.0;
 
 		System.out.println("Arithmetic mean: " + Aavg);
 		System.out.println("Harmonic mean: " + Havg);
