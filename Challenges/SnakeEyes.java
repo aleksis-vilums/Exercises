@@ -9,7 +9,7 @@ public class SnakeEyes {
         System.out.print("How many times? ");
         int n = scanner.nextInt();
 
-        int max = 6, i = 0, score = 0, rolls = 0;
+        int max = 6, i = 0, score = 0, rolls = 0, four = 0, totalrolls = 0;
 
         while (i <= n){
             int dice1 = randomGenerator.nextInt(max);
@@ -18,25 +18,25 @@ public class SnakeEyes {
             while (dice1 != dice2){
                 score += dice1 + dice2;
                 rolls += 1;
-                i += 1;
                 dice1 = randomGenerator.nextInt(max);
                 dice2 = randomGenerator.nextInt(max);
+                i += 1;
+            }
+
+            totalrolls += rolls;
+
+            if (rolls > 4){
+                four += 1;
             }
         }
 
-        int four = 0;
-
-        if (rolls > 4){
-            four += 1;
-        }
-
-        int avrgRolls = rolls/n;
-        int avrgScore = score/n;
-        float percent = 100.f * (four/n);
+        double avrgRolls = (double) totalrolls/n;
+        double avrgScore = (double) score/n;
+        double percent = ( (double) four/ (double) n)*100.f;
 
         System.out.println("Average Rolls: " + avrgRolls);
         System.out.println("Average Score: " + avrgScore);
-        System.out.println("Percentage Of player with more than 4 rolls: " + percent);
+        System.out.println("Percentage of players with more than 4 rolls: " + percent);
 
     }
 }
