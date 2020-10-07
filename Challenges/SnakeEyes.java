@@ -12,15 +12,14 @@ public class SnakeEyes {
         int max = 6, i = 0, score = 0, rolls = 0, four = 0, totalrolls = 0;
 
         while (i <= n){
-            int dice1 = randomGenerator.nextInt(max);
-            int dice2 = randomGenerator.nextInt(max);
+            int dice1 = randomGenerator.nextInt(max) + 1;
+            int dice2 = randomGenerator.nextInt(max) + 1;
 
-            while (dice1 != dice2){
+            while (dice1 + dice2 != 2){
                 score += dice1 + dice2;
                 rolls += 1;
-                dice1 = randomGenerator.nextInt(max);
-                dice2 = randomGenerator.nextInt(max);
-                i += 1;
+                dice1 = randomGenerator.nextInt(max) + 1;
+                dice2 = randomGenerator.nextInt(max) + 1;
             }
 
             totalrolls += rolls;
@@ -28,6 +27,9 @@ public class SnakeEyes {
             if (rolls > 4){
                 four += 1;
             }
+
+            rolls = 0;
+            i += 1;
         }
 
         double avrgRolls = (double) totalrolls/n;
