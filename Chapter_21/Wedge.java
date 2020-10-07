@@ -18,6 +18,7 @@ public class Wedge {
             }
             System.out.println();
             i -= 1;
+            x = 0;
         }
 	}	
 }
