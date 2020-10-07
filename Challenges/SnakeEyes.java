@@ -11,7 +11,7 @@ public class SnakeEyes {
 
         int max = 6, i = 0, score = 0, rolls = 0, four = 0, totalrolls = 0;
 
-        while (i <= n){
+        while (i < n){
             int dice1 = randomGenerator.nextInt(max) + 1;
             int dice2 = randomGenerator.nextInt(max) + 1;
 
@@ -24,7 +24,7 @@ public class SnakeEyes {
 
             totalrolls += rolls;
 
-            if (rolls > 4){
+            if (rolls >= 4){
                 four += 1;
             }
 
