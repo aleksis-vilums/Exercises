@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Color {
 	
-	int colors[] = new int[3];// variables
+	int colors[] = new int[3];// variables array use index to change indvisual
 
-	// Start
+	// Start constructor
     Color(){
 		randomColor();
     }
@@ -31,7 +31,7 @@ public class Color {
 		colorRules();
 	}
 
-    // set any of the r, g, b values indivisually
+    // set any of the r, g, b values indivisually refers to the up top method
 	public void setR(int r){
 		setColor(r, colors[1], colors[2]);
 	}
@@ -87,7 +87,7 @@ public class Color {
     }
     
 
-    // format and rules to (r, g, b)
+    // format and rules to (r, g, b) and returns the (r, g, b) values
 	public String toString(){
 		String value = new String("(" + colors[0] + ", " + colors[1] + ", " + colors[2] + ")");
 		
