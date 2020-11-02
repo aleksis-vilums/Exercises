@@ -5,19 +5,19 @@ public class Color {
 	int colors[] = new int[3];// variables array use index to change indvisual
 
 	// Start constructor
-    Color(){
+	Color(){
 		randomColor();
-    }
-    
-    public void randomColor(){
+	}
+	
+	public void randomColor(){
 		Random random = new Random();
 
 		for (int i = 0; i < 3; i++){
 			colors[i] = random.nextInt(256);
-        }
+		}
 
-    }
-    
+	}
+	
 	Color(int r, int g, int b){
 		setColor(r, g, b);
 	}
@@ -31,7 +31,7 @@ public class Color {
 		colorRules();
 	}
 
-    // set any of the r, g, b values indivisually refers to the up top method
+	// set any of the r, g, b values indivisually refers to the up top method
 	public void setR(int r){
 		setColor(r, colors[1], colors[2]);
 	}
@@ -44,10 +44,10 @@ public class Color {
 		setColor(colors[0], colors[1], b);
 	}
 	
-    //lighten/darken the colors 
+	//lighten/darken the colors 
 	public void lighten(double percent){
 		for (int i = 0; i < 3; i++){
-			colors[i] *= 1.f + (percent/100);
+			colors[i] *= 1.f + (percent/100); //idk
 		}
 
 		colorRules();
@@ -55,9 +55,9 @@ public class Color {
 
 	public void darken(double percent){
 		lighten(percent * -1);
-    }
-    
-    //blend by getting old color and adding them to new colors then returning that value
+	}
+	
+	//blend by getting old color and adding them to new colors then returning that value
 	public Color blendColor(Color otherColor){
 		int[] newColors = otherColor.getColors();
 
@@ -66,11 +66,11 @@ public class Color {
 		}
 
 		return new Color(newColors[0], newColors[1], newColors[2]);	
-    }
+	}
 
 
-    // get values of (r, g, b)
-    public int[] getColors(){
+	// get values of (r, g, b)
+	public int[] getColors(){
 		return colors;
 	}
 
@@ -84,10 +84,9 @@ public class Color {
 
 	public int getBlue(){
 		return getColors()[2];
-    }
-    
-
-    // format and rules to (r, g, b) and returns the (r, g, b) values
+	}
+	
+	// format and rules to (r, g, b) and returns the (r, g, b) values
 	public String toString(){
 		String value = new String("(" + colors[0] + ", " + colors[1] + ", " + colors[2] + ")");
 		
