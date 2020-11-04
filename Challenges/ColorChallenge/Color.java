@@ -28,7 +28,7 @@ public class Color {
 		colors[1] = g;
 		colors[2] = b;
 
-		Rules();
+		rules();
 	}
 
 	// set any of the r, g, b values indivisually refers to the up top method
@@ -50,7 +50,7 @@ public class Color {
 			colors[i] *= 1.f + (percent/100);
 		}
 
-		Rules();
+		rules();
 	}
 
 	public void darken(double percent){
@@ -93,7 +93,7 @@ public class Color {
 		return value;
 	}
 
-	private void Rules(){
+	private void rules(){
 		for (int i = 0; i < 3; i++){
 			if(colors[i] > 255){
 				colors[i] = 255;
