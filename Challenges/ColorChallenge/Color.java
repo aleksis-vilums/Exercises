@@ -6,10 +6,10 @@ public class Color {
 
 	// Start constructor
 	Color(){
-		random();
+		randomize();
 	}
 	
-	public void random(){
+	public void randomize(){
 		Random random = new Random();
 
 		for (int i = 0; i < 3; i++){
@@ -47,7 +47,7 @@ public class Color {
 	//lighten/darken the colors 
 	public void lighten(double percent){
 		for (int i = 0; i < 3; i++){
-			colors[i] *= 1.f + (percent/100); //idk
+			colors[i] *= 1.f + (percent/100);
 		}
 
 		Rules();
