@@ -6,10 +6,10 @@ public class Color {
 
 	// Start constructor
 	Color(){
-		randomColor();
+		random();
 	}
 	
-	public void randomColor(){
+	public void random(){
 		Random random = new Random();
 
 		for (int i = 0; i < 3; i++){
@@ -28,19 +28,19 @@ public class Color {
 		colors[1] = g;
 		colors[2] = b;
 
-		colorRules();
+		Rules();
 	}
 
 	// set any of the r, g, b values indivisually refers to the up top method
-	public void setR(int r){
+	public void setRed(int r){
 		setColor(r, colors[1], colors[2]);
 	}
 
-	public void setG(int g){
+	public void setGreen(int g){
 		setColor(colors[0], g, colors[2]);
 	}
 
-	public void setB(int b){
+	public void setBlue(int b){
 		setColor(colors[0], colors[1], b);
 	}
 	
@@ -50,7 +50,7 @@ public class Color {
 			colors[i] *= 1.f + (percent/100); //idk
 		}
 
-		colorRules();
+		Rules();
 	}
 
 	public void darken(double percent){
@@ -58,7 +58,7 @@ public class Color {
 	}
 	
 	//blend by getting old color and adding them to new colors then returning that value
-	public Color blendColor(Color otherColor){
+	public Color blend(Color otherColor){
 		int[] newColors = otherColor.getColors();
 
 		for (int i = 0; i < 3; i++){
@@ -93,7 +93,7 @@ public class Color {
 		return value;
 	}
 
-	private void colorRules(){
+	private void Rules(){
 		for (int i = 0; i < 3; i++){
 			if(colors[i] > 255){
 				colors[i] = 255;

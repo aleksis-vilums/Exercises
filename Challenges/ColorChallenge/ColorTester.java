@@ -4,13 +4,19 @@ public class ColorTester {
 		
 		System.out.println(colorClass);
 		
-		colorClass.randomColor();
+		colorClass.random();
 		System.out.println(colorClass);
 	
 		colorClass.setColor(24, 132, 234);
 		System.out.println(colorClass);
 
-		colorClass.setG(12);
+		colorClass.setGreen(12);
+		System.out.println(colorClass);
+
+		colorClass.setBlue(45);
+		System.out.println(colorClass);
+
+		colorClass.setRed(234);
 		System.out.println(colorClass);
 
 		colorClass.lighten(50.f);
@@ -22,7 +28,7 @@ public class ColorTester {
 		Color otherColor = new Color();
 		otherColor.setColor(24, 345, 56);
 		
-		System.out.println(colorClass.blendColor(otherColor));
+		System.out.println(colorClass.blend(otherColor));
 		System.out.println(colorClass.getRed());
 	}
 
