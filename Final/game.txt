@@ -1,0 +1,5 @@
+Kingdom
+John,Mage,5,6,6,10,0
+Joy,Knight,10,1,1,5,4
+Carter,Peasant,1,9,5,4,6
+Rick,Courtier,6,0,5,5,10
