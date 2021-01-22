@@ -1,6 +1,6 @@
 public class Person{
     private String firstName, lastName;
-    private Object x;
+    private Person x;
 
     Person(String firstName, String lastName){
         this.firstName = firstName;
@@ -44,8 +44,8 @@ public class Person{
         x = new Person(firstName, lastName);
     }
 
-    public String getCopy(){
-        return x.toString();
+    public Person getCopy(){
+        return x;
     }
 
 }
