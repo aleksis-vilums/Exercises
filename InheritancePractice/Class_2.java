@@ -20,8 +20,7 @@ public class Class_2 extends Class_1 {
     }
  
     public String toString() {
-        super.toString();
-        return z + " ";
+        return super.toString() + z;
     }
  
     //x = x1, y = y1, z = z1

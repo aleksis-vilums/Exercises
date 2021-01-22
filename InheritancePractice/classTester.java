@@ -11,6 +11,6 @@ public class classTester{
 
         test.print();
 
-
+        System.out.println(test);
     }
 }
