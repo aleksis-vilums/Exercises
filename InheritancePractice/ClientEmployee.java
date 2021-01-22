@@ -11,6 +11,7 @@ public class ClientEmployee {
 
         Employee prof = new Employee("John", "Doe", 25.50, 50, "COSC"); 
         Employee newEmp = new Employee();
+        Employee x = new Employee();
 
         System.out.println("Enter Employee last name: ");
         last = scanner.nextLine();
@@ -34,6 +35,10 @@ public class ClientEmployee {
         if(!newEmp.equals(prof)){
             System.out.println("Couldn't find an employee with same record.");
         }
+
+        prof.copy(x);
+
+        x.print();
 
 
 

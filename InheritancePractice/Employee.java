@@ -49,6 +49,12 @@ public class Employee extends Person{
         hoursWorked = hours;
         department = dep;
     }
+    
+    public void setEmployee(double rate, double hours, String dept){
+        payRate = rate;
+        hoursWorked = hours;
+        department = dept;
+    }
 
     public double getPayRate() {
         return payRate;
@@ -67,11 +73,11 @@ public class Employee extends Person{
     }
 
     public void copy(Employee x) {
-        super.copy(x);
+        x.setAll(getFirstName(), getLastName(), getPayRate(), getHoursWorked(), getDepartment());
     }
 
     public Employee getCopy() {
-        return x = new Employee(getFirstName(), getLastName(), getPayRate(), getHoursWorked(), getDepartment());
+        return x;
     }
 
 }

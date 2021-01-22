@@ -41,7 +41,7 @@ public class Person{
     }
 
     public void copy(Object x){
-        x = new Person(firstName, lastName);
+        x = new Person(getFirstName(), getLastName());
     }
 
     public Person getCopy(){
