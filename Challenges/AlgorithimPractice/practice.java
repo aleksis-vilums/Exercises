@@ -25,21 +25,18 @@ public class practice{
     }
 
     public static void selectionSort(int[] data){
-        int temp = 0;
         int location = 0;
 
-        for(int i = 0; i < data.length - 1; i++){
+        for(int i = 0; i < data.length; i++){
             int minimum = data[i];
             for (int x = i; x < data.length; x++){
                 if (minimum >= data[x]){
                     minimum = data[x];
-                }
-                if(minimum == data[x]){
                     location = x;
                 }
             }
     
-            temp = data[i];
+            int temp = data[i];
             data[i] = minimum;
             data[location] = temp;
         }
@@ -47,12 +44,10 @@ public class practice{
     }
 
     public static void insertionSort(int[] data){  
-        int temp = 0;
-
         for(int x = 0; x < data.length; x++){
-            for (int i = 1; i < data.length; i++){
+            for (int i = x; i > 0; i--){
                 if (data[i] <= data[i - 1]){
-                    temp = data[i];
+                    int temp = data[i];
                     data[i] = data[i - 1];
                     data[i - 1] = temp;
                 }
@@ -61,13 +56,10 @@ public class practice{
     }
 
     public static void bubbleSort(int[] data){
-        int temp = 0;
-
         for (int x = 0; x < data.length - 1; x++){
-            int n = data.length - x;
-            for (int i = 0; i < n - 1; i++) {
+            for (int i = 0; i < data.length - 1; i++) {
                 if (data[i] >= data[i + 1]) { 
-                    temp = data[i]; 
+                    int temp = data[i]; 
                     data[i] = data[i + 1]; 
                     data[i + 1] = temp; 
                 } 
