@@ -2,12 +2,16 @@ public class Employee extends Person{
     private double payRate;
     private double hoursWorked;
     private String department;
+    private Employee x;
 
     public final int HOURS = 40;
     public final double OVERTIME = 1.5;
 
-    public Employee(String firstName, String lastName){
-        super(firstName, lastName);
+    public Employee(){
+        super("", "");
+        payRate = 0;
+        hoursWorked = 0;
+        department = "";
     }
 
     public Employee(String firstName, String lastName, double payRate, double hoursWorked, String department){
@@ -45,6 +49,12 @@ public class Employee extends Person{
         hoursWorked = hours;
         department = dep;
     }
+    
+    public void setEmployee(double rate, double hours, String dept){
+        payRate = rate;
+        hoursWorked = hours;
+        department = dept;
+    }
 
     public double getPayRate() {
         return payRate;
@@ -63,12 +73,11 @@ public class Employee extends Person{
     }
 
     public void copy(Employee x) {
-        super.copy(x);
+        x.setAll(getFirstName(), getLastName(), getPayRate(), getHoursWorked(), getDepartment());
     }
 
     public Employee getCopy() {
-        Employee y = new Employee(getFirstName(), getLastName());
-        return y;
+        return x;
     }
 
 }
