@@ -1,6 +1,6 @@
 public class LogNumber {
     public static void main(String[] args) {
-        System.out.println(logNumber(32));
+        System.out.println(logNumber(48));
     }
 
     public static int logNumber(int n){
