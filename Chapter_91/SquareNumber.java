@@ -1,6 +1,6 @@
 public class SquareNumber {
     public static void main(String[] args) {
-        System.out.println(squareNumber(4));
+        System.out.println(squareNumber(5));
     }
 
     public static int squareNumber(int n){
