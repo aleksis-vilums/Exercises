@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class TriangleTester {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter a integer:");
-        int n = scanner.nextInt();
+        int n = scan.nextInt();
         if (n > 0){
             System.out.println(tri(n));
         } else {
