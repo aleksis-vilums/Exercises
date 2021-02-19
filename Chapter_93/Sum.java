@@ -19,12 +19,6 @@ public class Sum {
     }
 
     public static int sum(int[] array){
-        int index = 0;
-
-        if (array.length == index){
-            return 0;
-        } else {// index < array.length
-            return array[index] + sum(array, index + 1);
-        }
+        return sum(array, 0);
     }
 }
